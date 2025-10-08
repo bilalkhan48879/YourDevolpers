@@ -1,0 +1,209 @@
+body
+{
+    background-color: #212121;
+    color: white;
+ 
+}
+
+#header
+{
+    border: 5px double #0cec83;
+    text-align: center;
+    color: blue;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#header p
+{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    color: #5e3370;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.MainContent
+{
+display: flex; 
+justify-content: space-between;
+align-items: flex-start;
+  gap: 20px; 
+}
+.TaskButtonsMenu
+{
+  text-align: center;
+  width: 550px;
+  margin-right: 0;
+}
+
+#taskButtons {
+  margin-top: 25px;  
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge greenyellow;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#taskButtons::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+#taskButtons::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.5s;
+}
+
+#taskButtons:hover::before, #taskButtons:hover::after {
+  transform: scale(0)
+}
+
+#taskButtons:hover {
+  box-shadow: inset 0px 0px 25px greenyellow;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  padding: 40px 40px;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-image: linear-gradient(to top, #5aad0d 0%, #9b59b6 80%, #0896f5 100%);
+  border-radius: 30px;
+  border: 1px solid #5e3370;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff; 
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+}
+
+.btn:hover {
+  box-shadow: 0 4px 3px 1px #b88fd9, 
+              0 6px 8px #8e44ad, 
+              0 -4px 4px #6c3483, 
+              0 -6px 4px #d2b4de, 
+              inset 0 0 3px 3px #8e44ad;
+
+}
+
+.btn:active,
+.btn:focus {
+  box-shadow: 0 4px 3px 1px #b88fd9, 
+              0 6px 8px #8e44ad, 
+              0 -4px 4px #6c3483, 
+              0 -6px 4px #d2b4de, 
+              inset 0 0 5px 3px #5e3370, 
+              inset 0 0 30px #9b59b6;
+
+
+}
+
+#InfoBar
+{
+
+margin-left: 0px;
+margin-right: 0px;
+background-color: #5e3370;
+border-radius: 50px;
+padding: 20px;
+width: 450px;
+}
+
+#InfoBar #AutoImg
+{
+    width: 440px;
+    height: 700px;
+    border-radius: 2rem;
+}
+
+#InfoBar p
+{
+    font-size: 30px;
+    text-align: center;
+    color: #0cec83;
+}
+
+h4
+{
+  border: 3px solid skyblue;
+  padding: 20px 30px;
+}
+
+#taskButtons p
+{
+  font-size: 10px;
+  color: #0cec83;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.BtnPica
+{
+  font-size: 25px;
+  color: #ec780c;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ 
+ .slider-container {
+      width: 400px;
+      overflow: hidden;
+      position: relative;
+      margin: auto;
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    
+    .buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .slides img {
+      border-radius: none;
+      width: 400px;
+      height: 250px;
+    }

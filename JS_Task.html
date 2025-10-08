@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Javascript Project</title>
+    <style>
+    
+    body
+{
+ 
+    background-color: black;
+    margin: 5px;
+}
+
+form
+{
+   border: 5px solid red;
+    text-align: center;
+    padding: 20px;
+}
+
+#Form-Div
+{
+    margin-top: 60px;
+    background-color: blueviolet;
+    border: 5px solid black;
+    border-radius: 20px;
+    width: 500px;
+    height: auto;
+    margin-left: 350px;
+    padding-top: 70px;
+
+}
+
+label
+{
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 10px;
+    background-color: transparent;
+    color: rgb(216, 17, 17);
+    border: 2px solid red;
+    padding: 20px 20px;
+    border-radius: 20px;
+    margin: 10px;
+    margin-bottom: 20px;
+    cursor: not-allowed;
+}
+
+input,textarea
+{
+    display: inline-block;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: transparent;
+    padding: 20px 30px;
+    color: rgb(253, 245, 245);
+    border-radius: 20px;
+}
+
+.animated-buttone {
+margin-top: 20px;
+margin-left: 95px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: red;
+  box-shadow: 0 0 0 2px red;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-buttone svg {
+  position: absolute;
+  width: 24px;
+  fill: red;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-buttone .arr-1 {
+  right: 16px;
+}
+
+.animated-buttone .arr-2 {
+  left: -25%;
+}
+
+.animated-buttone .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-buttone .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-buttone:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+}
+
+.animated-buttone:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-buttone:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-buttone:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-buttone:hover svg {
+  fill: #212121;
+}
+
+.animated-buttone:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px red;
+}
+
+.animated-buttone:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+
+.uiverse-pixel-radio {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;    
+  justify-content: center;
+  padding: 0 0;
+  border: none;
+
+}
+
+.uiverse-pixel-radio input[type="radio"] {
+  appearance: none;
+  width: 1.5em;
+  height: 1.5em;
+  background: #ff6b35;
+  border: none;
+  box-shadow:
+    0 0 0 0.15em #000,
+    0 0 0 0.3em #fff,
+    0 0 0 0.45em #000;
+  image-rendering: pixelated;
+  margin: 0;
+  transition: all 0.1s steps(1);
+  position: relative;
+}
+
+.uiverse-pixel-radio input[type="radio"]::before {
+  content: "";
+  display: block;
+  width: 0.75em;
+  height: 0.75em;
+  background: #052feb;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.1s ease-out;
+  box-shadow: 0 0 0 1px #000;
+}
+
+.uiverse-pixel-radio input[type="radio"]:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+  background: #000;
+}
+
+.uiverse-pixel-radio input[type="radio"]:hover {
+  background: #ff8c42;
+}
+
+.uiverse-pixel-radio input[type="radio"]:active {
+  background: #e55a2b;
+  transform: translateY(0.125em);
+}
+
+.uiverse-pixel-radio input[type="radio"]:focus-visible {
+  outline: 2px dashed #fff;
+  outline-offset: 0.2em;
+}
+
+.label-text
+{
+    font-size: 20px;
+   font-weight: 100;
+    margin-top: 10px;   
+    background-color: transparent;
+    color: rgb(253, 245, 245);
+    border: 2px solid red;
+    padding: 20px 20px;
+    border-radius: 20px;
+    margin: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#Mail
+{
+  display: inline-block ;
+  border: 2px solid rgb(47, 0, 255);
+  background-color: transparent;
+  color: #052feb;
+  padding: 20px 30px;
+  margin-top: 20px;
+  margin-left: 80px;
+  cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+    <form id="JSTaskForm">
+
+    <h3 id="disTitle" style="text-align: center; color: white;">Enter Your Info & Send It On WA.We Will Contact You Later.</h3>
+     
+    <div>
+        <label for="Name">Name</label><input type="text" id="name" placeholder="Your Name" required>
+    </div>
+
+    <div>
+        <label for="Email">Email</label><input type="email" id="email" placeholder="Your Email" required>
+    </div>
+
+    <div>
+        <label for="Country">Country</label><input type="text" id="country" placeholder="Your Country" required>
+    </div>
+
+    <div>
+        <label for="NumPages">Number Of Pages</label><input type="number" id="NumPages" placeholder="Number Of JS Pages" required>
+    </div>
+
+    <div>
+        <label for="NumDays">Days Limit</label><input type="number" id="NumProject" placeholder="Days For Your Project" required>
+      </div>
+
+      <div>
+        <label for="message" >Any Message</label><input type="text" id="message" placeholder="Your Message">
+      </div>
+      
+      
+      <center>
+        
+        <div class="uiverse-pixel-radio-group" style="margin-top: 25px;">
+
+          <div>
+            <label for="PayProject" style="border: none;" id="PayHead">Payment Method</label>  
+          </div>
+
+          <label class="uiverse-pixel-radio">
+            <input type="radio" name="pixel-choice" value="We will work with your demanding payment." id="PayProject" checked=""/>
+            <span class="label-text" >We will work with your demanding payment[Devolper Choice].</span>
+          </label>
+          <label class="uiverse-pixel-radio">
+            <input type="radio" name="pixel-choice" value="We Will Work With Payment of our choice." id="PayProject" />
+            <span class="label-text" >We Will Work With Payment of our choice[Our Choice].</span>
+          </label>
+        </div>
+        
+      </center>
+      
+
+    <center>
+        
+        <button class="animated-buttone" type="submit">
+            <svg viewbox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                <path
+                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                >
+                </path
+                ></svg>
+                <span class="text">Send On Whatsapp</span>
+                <span class="circle"></span>
+                <svg viewbox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                    >
+                    </path
+            ></svg>
+        </button>
+
+    </center>
+
+                       <button id="Mail">Send Through Other Method.</button>
+
+
+
+</form>
+
+ <script>
+ 
+
+    document.getElementById("JSTaskForm").addEventListener("submit", function(e){
+      e.preventDefault();
+
+   
+      let phone = "+923493453982"; 
+
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let country = document.getElementById("country").value;
+      let NumPages = document.getElementById("NumPages").value;
+      let NumProject = document.getElementById("NumProject").value;
+      let message = document.getElementById("message").value;
+
+      let PayProject = document.querySelector('input[name="pixel-choice"]:checked').value;
+
+      let text = `*Javascript Project Assigner Form:*%0A
+      *Name:* ${name}%0A
+      *Email:* ${email}%0A
+      *Country:* ${country}%0A
+      *Number Of Javascript Pages:* Total ${NumPages} Pages%0A
+      *Project IN Limited Days:* IN ${NumProject} Days%0A
+      *Payment Method:* ${PayProject}%0A
+      *Message:* ${message}`;
+
+      let url = `https://wa.me/${phone}?text=${text}`;
+      window.open(url, "_blank");
+    });
+
+
+
+let alarm = (alr) =>
+{
+  let TargetPage = document.querySelector("#NumPages");
+
+  TargetPage.addEventListener("mouseover", (evt) =>
+{
+let disc = document.querySelector("#disTitle");
+disc.style.color = "red";
+disc.innerText = "Make Sure Your Pages Limit Is Btw 1 to 15 Pages.";
+return evt;
+});
+
+TargetPage.addEventListener("mouseleave", (evt) =>
+{
+  let disc = document.querySelector("#disTitle");
+  disc.style.color = "white";
+  disc.innerText = "Enter Your Info & Send It On WA.We Will Contact You Later.";
+return evt;
+});
+
+return alr;
+}
+
+alarm();   //For Page Limit Warning
+
+let paywarn = (payter) =>
+{
+let Target = document.querySelector(".uiverse-pixel-radio");
+
+Target.addEventListener("mouseover", (evt) =>
+{
+let display = document.querySelector("#PayHead");
+display.innerText = "We Will receive payment after the Project Complete.";
+return evt;
+});
+
+  Target.addEventListener("mouseleave", (evt) =>
+{
+let display = document.querySelector("#PayHead");
+display.innerText = "Payment Method";
+return evt;
+});
+
+return payter;
+}
+
+paywarn(); //For Pay Warning
+
+
+//Transfer Data By Mail
+
+document.querySelector("#Mail").addEventListener("click", function(e){
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const country = document.getElementById("country").value.trim();
+  const NumPages = document.getElementById("NumPages").value.trim();
+  const NumProject = document.getElementById("NumProject").value.trim();
+  const message = document.getElementById("message").value.trim();
+  const PayProject = document.querySelector('input[name="pixel-choice"]:checked').value;
+
+  if (!name || !email || !country || !NumPages || !NumProject) {
+    alert("⚠️ Please fill all required fields before sending email.");
+    return;
+  }
+
+  const to = "bilalkhancent48879@gmail.com";
+  const subject = encodeURIComponent("JavaScript Project Assigner Form");
+
+  const B_NAME    = "𝗡𝗔𝗠𝗘";
+  const B_EMAIL   = "𝗘𝗠𝗔𝗜𝗟";
+  const B_COUNTRY = "𝗖𝗢𝗨𝗡𝗧𝗥𝗬";
+  const B_PAGES   = "𝗡𝗨𝗠𝗕𝗘𝗥 𝗢𝗙 𝗝𝗦 𝗣𝗔𝗚𝗘𝗦";
+  const B_DAYS    = "𝗣𝗥𝗢𝗝𝗘𝗖𝗧 𝗗𝗔𝗬𝗦";
+  const B_PAY     = "𝗣𝗔𝗬𝗠𝗘𝗡𝗧 𝗠𝗘𝗧𝗛𝗢𝗗";
+  const B_MSG     = "𝗠𝗘𝗦𝗦𝗔𝗚𝗘";
+
+  const bodyText =
+    `${B_NAME}: ${name}\n` +
+    `${B_EMAIL}: ${email}\n` +
+    `${B_COUNTRY}: ${country}\n` +
+    `${B_PAGES}: ${NumPages}\n` +
+    `${B_DAYS}: ${NumProject}\n` +
+    `${B_PAY}: ${PayProject}\n` +
+    `${B_MSG}: ${message || "N/A"}`;
+
+  const body = encodeURIComponent(bodyText);
+
+  const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
+  window.open(gmailURL, "_blank");
+});
+
+
+</script>
+
+</body>
+</html>
